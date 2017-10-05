@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.cabeçalho{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+	height: 80px;
+    font-weight: bold;
+    text-transform: uppercase;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+
+/*menu*/
+.menu{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+}
+.menu ul{
+    font-size: 16px;
+    font-weight: bold;
+    list-style: none;
+    position: relative;
+}
+.menu ul li{
+    width: 150px;
+    float: left;
+}
+.menu a{
+    padding: 15px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+}
+.menu ul ul{
+    position: absolute;
+    visibility: hidden;
+}
+.menu ul ul li{
+    float: none;
+    border-bottom: solid 1px #ccc;
+}
+.menu ul ul li a{
+    background-color: #069;
+    font-size: 12px;
+}
+.menu ul li:hover ul{
+    visibility: visible;
+}
+.menu a:hover{
+    background-color: white;
+    color: black;
+}
+label[for="bt_menu"]{
+    padding: 5px;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+#bt_menu{
+    display: none;
+}
+label[for="bt_menu"]{
+    display: none;
+}
+
+/*conteudo*/
+.nome{
+	margin-top: 5px;
+	background: red;
+	width:100%;
+	height:420px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+
