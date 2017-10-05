@@ -1,0 +1,13 @@
+.pessoa {
+    margin-bottom: 20px;
+}
+
+.pessoa img {
+    width: 80%;
+    max-width: 200px;
+}
+
+.pessoa .nome {
+    margin-top: 15px;
+    font-weight: bold;
+}
