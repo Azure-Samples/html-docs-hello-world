@@ -1,0 +1,28 @@
+body{
+    background-color: mintcream;
+}
+
+h1{
+    background-color:#D3D3D3;
+}
+
+.container{
+    /*width: 80%;*/
+    margin: 0 20%;
+    
+}
+
+.curriculo{
+    background-color: #D3D3D3;
+    padding: 3px;
+    padding-left: 7px;
+    color: 
+}
+
+.curriculo h2{
+    color: #8B0000;
+}
+
+.curriculo p{
+    font-size: 17px;
+}
