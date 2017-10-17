@@ -1,0 +1,45 @@
+<html>
+
+<head>
+
+<title>teste </title>
+
+</head>
+
+<body>
+
+
+<h1 align = 'center' <b> Curriculum Vitae </h4></b>
+
+<h3><b> <u>1 - Dados Pessoais</u></b></h3>
+
+<h4><b>Nome:</b><br></h4>Rodrigo Ferreira da Silva <br>
+
+<h4>Data de Nascimento:</h4>15/05/1997
+
+<h4>Endereço: </h4> Rua Jamaica, 80
+
+<h4>Email:</h4> rodrigorfsfr3@gmail.com
+
+<h4>Telefone: </h4> 11 940-788-758
+
+<h3><b> <u>2 - Escolaridade </u></b></h3>
+
+<h4>Ensino Fundamental: E.E. Recanto dos humildes<p>
+Ensino Médio: E.E. Brigadeiro Gavião Peixoto<p>
+<b>Ensino Superior: Impacta Tecnologia </h4>
+
+
+<h3><b> <u>3 - Dados Profissionais </h3></b> </u>
+
+<h4><b>Empresa: SAENG ENGENHARIA</b><p>
+Cargo: Aux. Administrativo<p>
+Ano Entrada: 2015 <p>
+Ano Saida: 20117 <p>
+</h4></b>
+
+
+
+</body>
+
+</html>
