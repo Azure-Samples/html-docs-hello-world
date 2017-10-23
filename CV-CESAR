@@ -1,0 +1,44 @@
+<html>
+
+<head>
+
+<title>teste </title>
+
+</head>
+
+<body>
+
+
+<h1 align = 'center' <b> Curriculum Vitae </h4></b>
+
+<h3><b> <u>1 - Dados Pessoais</u></b></h3>
+
+<h4><b>Nome:</b><br></h4>Cesar Augusto Pimenta<br>
+
+<h4>Data de Nascimento:</h4>20/04/1992
+
+<h4>Endereço: </h4> Rua carambei n°198
+<h4>Email:</h4> cesar-pimenta@live.com
+
+<h4>Telefone: </h4> 11 9 5452-4533
+
+<h3><b> <u>2 - Escolaridade </u></b></h3>
+
+<h4>Ensino Fundamental: E.E. Maria da conceição<p>
+Ensino Médio: E.E. Padre manoel da nobrega<p>
+<b>Ensino Superior: Impacta Tecnologia </h4>
+
+
+<h3><b> <u>3 - Dados Profissionais </h3></b> </u>
+
+<h4><b>Empresa: ABRAPP - Associação brasileira de entidades de previdencia privada fechada. </b><p>
+Cargo: Analista de sistemas Jr.<p>
+Ano Entrada: 2016 <p>
+Ano Saida: 20117 <p>
+</h4></b>
+
+
+
+</body>
+
+</html>
