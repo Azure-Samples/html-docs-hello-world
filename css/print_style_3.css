@@ -1,0 +1,295 @@
+/* introRegular */
+@font-face {
+ 	font-family: "introRegular";
+ 	src: url('../fonts/introRegular/introRegular.eot');
+ 	src: url('../fonts/introRegular/introRegular.eot?#iefix') format('embedded-opentype'),
+ 	url('../fonts/introRegular/introRegular.svg') format('svg'),
+ 	url('../fonts/introRegular/introRegular.woff') format('woff'),
+ 	url('../fonts/introRegular/introRegular.ttf') format('truetype');
+
+ 	font-weight: normal;
+ 	font-style: normal;
+}
+.introRegular {
+ 	font-family: "introRegular", arial, sans-serif;
+ 	font-weight: normal;
+ 	white-space: normal;
+ 	text-rendering: auto;
+ 	letter-spacing: 0;
+}
+@font-face {
+ 	font-family: "introBold";
+ 	src: url('../fonts/introBold/introBold.eot');
+ 	src: url('../fonts/introBold/introBold.eot?#iefix') format('embedded-opentype'),
+ 	url('../fonts/introBold/introBold.svg') format('svg'),
+ 	url('../fonts/introBold/introBold.woff') format('woff'),
+ 	url('../fonts/introBold/introBold.ttf') format('truetype');
+
+ 	font-weight: normal;
+ 	font-style: normal;
+}
+.introBold {
+ 	font-family: "introBold", arial, sans-serif;
+ 	font-weight: normal;
+ 	white-space: normal;
+ 	text-rendering: auto;
+ 	letter-spacing: 0;
+}
+@font-face {
+ 	font-family: "introBook";
+ 	src: url('../fonts/introBook/introBook.eot');
+ 	src: url('../fonts/introBook/introBook.eot?#iefix') format('embedded-opentype'),
+ 	url('../fonts/introBook/introBook.svg') format('svg'),
+ 	url('../fonts/introBook/introBook.woff') format('woff'),
+ 	url('../fonts/introBook/introBook.ttf') format('truetype');
+
+ 	font-weight: normal;
+ 	font-style: normal;
+}
+.introBook {
+ 	font-family: "introBook", arial, sans-serif;
+ 	font-weight: normal;
+ 	white-space: normal;
+ 	text-rendering: auto;
+ 	letter-spacing: 0;
+}
+.page{
+	background-color:#ffffff;
+	width:auto;
+	width:720px;
+	padding:30px;
+	border-radius: 5px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+	font-family: "introRegular", arial, sans-serif;
+	color:#5cb0cb;
+	font-weight:normal;
+	/*margin:30px auto;*/
+}
+.subpage{
+	width:190mm;
+	}
+.bloco{
+	display:block;
+	box-sizing: border-box;
+	width:100%;
+	}
+	.bloco:before{
+		display: table;
+    	content: " ";
+		box-sizing: border-box;
+	}
+	.bloco:after{
+		display: table;
+    	content: " ";
+		box-sizing: border-box;
+		clear: both;
+	}
+
+.col{
+	display:block;
+	position: relative;
+	box-sizing: border-box;
+	float:left;
+}
+.pull-right{
+	float:right;
+}
+.pull-left{
+	float:left;
+}
+
+.informacoes{
+	margin-bottom:20pt;
+}
+.informacoes .col-1{
+	/*background-color: #1a4567 !important;
+    -webkit-print-color-adjust: exact;*/
+	width:32mm;
+	height:41mm;
+}
+.informacoes .col-2{
+	width:158mm;
+	padding-left:10mm;
+}
+.informacoes .col-2 .bloco .col{
+	padding-right: 7mm;
+	padding-bottom: 2mm;	
+}
+.informacoes .nome{
+	padding-bottom:0mm !important;
+}
+.informacoes  .linha_2{
+	padding-bottom:2mm;
+}
+.text-center{
+	text-align:center;
+}
+
+
+h1{
+	color:#5cb0cb;
+	margin-top:0pt;
+	font-size:13pt;
+	font-weight:normal;
+}
+label{
+	color:#5cb0cb;
+	font-size:6pt;
+	font-weight:normal;
+}
+.texto{
+	color:#636363;
+	font-size:9pt;
+	font-weight:normal;
+	line-height:13pt;
+	font-family: "introBook", arial, sans-serif;
+}
+.idade{
+	font-size:9pt;
+	padding-top:1.5mm;
+	padding-bottom: 2.5mm;
+	border-bottom:1px solid #5cb0cb;
+}
+.cargo{
+	background-color:#5cb0cb !important;
+	-webkit-print-color-adjust: exact;
+	color:#ffffff;
+	font-family: "introBold", arial, sans-serif;
+	border-radius:15px;
+	padding:3.5pt;
+	text-transform:uppercase;
+	font-size:12pt;
+}
+
+.resumo{
+	padding-top:15pt;
+	padding-bottom:20pt;
+}
+.grupo{
+	/*page-break-inside:avoid;*/
+}
+.experiencia .grupo_experiencia:last-child{
+	border:none !important;
+	margin-bottom:15pt !important;
+}
+.experiencia_cargo{
+	margin-bottom:10pt;
+}
+.linha_titulo{
+	border-top: 2px solid #e7f3f7;
+	margin-bottom:10pt;
+	margin-top: 15pt;
+}
+.titulo{
+	top:-9pt;
+	background-color:#ffffff !important;
+	-webkit-print-color-adjust: exact;
+	width:auto;
+	position:relative;
+	padding:0pt 15pt;
+	text-transform:uppercase;
+}
+.empresa{
+	background-color:#5cb0cb !important;
+	-webkit-print-color-adjust: exact;
+	color:#ffffff;
+	font-family: "introRegular", arial, sans-serif;
+	font-weight:500;
+	border-radius:15px;
+	padding:5pt 10pt;
+	font-size:9pt;
+}
+.periodo{
+	font-family: "introRegular", arial, sans-serif;
+	font-weight:500;
+	color:#5cb0cb;
+	font-size:10pt;
+	padding-top:5pt;
+}
+.linha_empresa{
+	margin-bottom:15pt;
+}
+.experiencia_funcao{
+	color:#636363;
+	font-size:10pt;
+	text-transform:none;
+}
+.experiencia_periodo{
+	color:#636363;
+	font-size:8pt;
+	background-color:#eeeeee !important;
+	-webkit-print-color-adjust: exact;
+	padding:2pt 6pt;
+	position: relative;
+    top: -2pt;
+}
+.linha_experiencia_cargo{
+	padding-bottom:15pt;
+}
+.grupo_experiencia{
+	margin-bottom: 25pt;
+    border-bottom: 1px solid #ebebeb;
+}
+.nome_curso{
+	color:#5cb0cb;
+    font-size: 9.5pt;
+}
+.status_curso{
+	color: #636363;
+    font-size: 8pt;
+	font-style:italic;
+}
+.periodo_curso {
+    font-family: "introRegular", arial, sans-serif;
+    font-weight: 500;
+    color: #5cb0cb;
+    font-size: 10pt;
+}
+.linha_formacao_1{
+	margin-bottom:5px;
+}
+.grupo_formacao{
+	padding-bottom: 15pt;
+    border-bottom: 1px solid #ebebeb;
+    margin-bottom: 15pt;
+}
+.formacao .grupo_secundario:last-child .grupo_formacao{
+	border:none !important;
+}
+.subpage .grupo_experiencia:last-child {
+	border:none;
+}
+.idiomas{
+	margin-bottom:30pt;
+}
+.idiomas .col, .tecnologia .col {
+    padding-right: 3mm;
+}
+.idiomas label, .tecnologia label{
+	font-weight:bold !important;
+	line-height: 17pt;
+}
+.cem_porcento{
+	width:100% !important;
+	margin-left:0px !important;
+	margin-right:0px !important;
+	padding-left:0px !important;
+	padding-right:0px !important;
+}
+
+.informacoes, .resumo, .experiencia > grupo_secundario, .formacao > grupo_secundario, .idiomas, .tecnologia, .dados_complementares{
+	break-inside:avoid;
+}
+
+
+@media print {
+	@page {
+		size: A4;
+		margin: 9mm;
+	}
+	.page{
+		padding:0;
+		margin:0;
+		box-shadow:none;
+	}
+}
