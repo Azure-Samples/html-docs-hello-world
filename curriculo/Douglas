@@ -8,6 +8,7 @@
 
 <body>
 
+<a href=''> Voltar </a>
 
 <h1 align = 'center' <b> Curriculum Vitae </h4></b>
 
@@ -31,9 +32,7 @@
 			   
 				<li id='item_1'> Ensino médio completo </li>
 
-			    
 				<li id='item_2'> Ensino Técnico em informatica </li>
-
 			 
 				<li id='item_2'> Ensino Técnico em informatica </li>
   
