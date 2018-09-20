@@ -1,14 +1,55 @@
-<!DOCTYPE html>
-
 <html>
-  <head>
-    <title><center>Douglas Costa Rodrigues</center></title>
-  </head>
+
+<head>
+
+<title>curriculo </title>
+
+</head>
 
 <body>
 
-  <h1>My First Heading</h1>
-  <p>My first paragraph.</p>
+
+<h1 align = 'center' <b> Curriculum Vitae </h4></b>
+
+<h3><b> <u>1 - Dados Pessoais</u></b></h3>
+
+	<h4><b>Nome:</b><br></h4>Douglas Rodrigues <br>
+
+	<h4>Data de Nascimento:</h4>01-11-1994
+
+	<h4>Endereço: </h4> Rua Fabiano de lucena
+
+	<h4>Email:</h4> teste@teste.com.br
+
+	<h4>Telefone: </h4>2356565
+
+<h2><center>Objetivo</center></h2>
+
+  		
+			<ul id='Escolaridade'>
+ 
+			   
+				<li id='item_1'> Ensino médio completo </li>
+
+			    
+				<li id='item_2'> Ensino Técnico em informatica </li>
+
+			 
+				<li id='item_2'> Ensino Técnico em informatica </li>
+  
+			</ul>
+
+
+
+<h3><b> <u>3 - Dados Profissionais </h3></b> </u>
+
+<h4><b>Empresa: Ace4 Tecnologia</b><p>
+Cargo: programador<p>
+Ano Entrada: 2016 <p>
+Ano Saida: 2018 <p>
+</h4></b>
+
+
 
 </body>
 
