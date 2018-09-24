@@ -1,0 +1,16 @@
+.fundo {
+    background-color: cadetblue;
+}
+
+.content{
+    width:786px;
+    height:auto;
+    margin:auto;
+    text-align:justify;
+    border-style:solid solid solid double;
+    border-width: 2px 4px 3px 4px;
+    padding:3px;
+    border-color:#060 #666 #666 #060;
+    position:relative;
+   
+   }
