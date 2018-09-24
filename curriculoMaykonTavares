@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+	<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="estilo.css"/>
+		<title></title>
+	</head>
+	<body>
+	<div class="div01">
+
+
+
+		<div class="div03" align="center">
+			<p class="p"><b>Maykon Tavares</b></p>
+			<p class="p"><i>Brasileiro – Solteiro – 24 Anos – Caieiras, SP</i></p>
+			<p class="p"><i>maykon.tavares@aluno.faculdadeimpacta.com.br</i></p>
+		</div>
+
+
+		<hr class="l1"  width=" 950" color=gray>
+
+		<h3 class="p" align="center">OBJETIVO</h3>
+		<p class="p" align="center">Atuar na área de Desenvolvimento de Sistemas.</p>
+
+		<hr class="l1"  width=" 950" color=gray>
+		<h3 class="p" align="center">RESUMO DE QUALIFICAÇÕES</h3>
+		<p class="p" align="center">Análise e Desenvolvimento de Sistemas, Faculdade Impacta de Tecnologia;
+									Domínio em Lógica de Programação, estudando as linguagens Java (JEE/JDK) e Python. Banco de dados
+									Oracle e Postgre. Conhecimentos em HTML, CSS e PL/SQL. Metodologia de trabalho Ágil. Experiência
+									com automatização de sistemas e processos.
+									Atuação nas áreas de controle de qualidade e implantação de processos de padronização internacional.</p>
+
+		<hr class="l1"  width=" 950" color= gray>
+
+		<h3 class="p" align="center">FORMAÇÃO</h3>
+		<p class="p" align="center">1) Análise e Desenvolvimento de Sistemas – Faculdade Impacta Tecnologia - Conclusão em 12/2019<br>
+								 2) Engenharia Civil - Universidade Nove de Julho - Conclusão em 06/2016</p>
+
+
+    <hr class="l1"  width=" 950" color=gray>
+
+		<h3 class="p" align="center">IDIOMAS</h3>
+    <p class="p" align="center"> Espanhol: Intermediário / Inglês: Básico</p>
+
+		<hr class="l1"  width=" 950" color=gray>
+
+		<h3 class="p" align="center">ATIVIDADES EXTRACURRICULARES</h3>
+		<p class="p"align="center">- 2018 – Curso Java para Web – SENAI<br>
+								 - 2016 – Curso Autocad – SENAI<br>
+								 - 2013 – Curso Gestão e Negócios – SENAC<br>
+								 - 2012 – Técnico em Informática – MICROWORLD<br>
+								 - 2011 – Curso Técnico em Logística – ETEC<br>
+
+	</div>
+
+
+	</body>
+	</html>
