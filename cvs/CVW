@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>Walter Oliveira</title>
+    <meta charset="utf-8">
+    <style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    .container{
+        margin: 0 auto;
+        width: 60%;
+        border: 1px solid black;
+    }
+    .center{
+        text-align: center;
+    }
+    ul li, h3{
+        margin: 20px;
+    }
+    </style>
+</head>
+<body>
+    <div class="container center">
+        <h1>Walter Oliveira</h1>
+        <p>Endereco: Rua, da minha casa Nº 001</p>
+        <p>Telefone: (11) 96187-8675</p>
+        <p>CEP: 01248-500</p>
+    </div>
+    <div class="container pad">
+        <h3>Skill</h3>
+        <ul>
+            <li>Java</li>
+            <li>C#</li>
+            <li>SQL</li>
+            <li>UiPath RPA</li>
+            <li>ERP SAP</li>
+            <li>CRM ORACLE</li>
+            <li>CRM SalesForce</li>
+        </ul>
+    </div>
+    
+</body>
+</html>
