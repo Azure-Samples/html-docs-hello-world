@@ -6,16 +6,14 @@ pipeline {
                 sh ' chmod 777 script/deploy.sh' 
             }
         }
-        stage('Test'){  //2 
+        stage('Deploy'){  //2 
             steps {
-                sh 'chmod 777 script/deploy.sh'
+                sh 'chmod 777 deploy02.sh'
                
             }
+        
+        
+            
         }
-        stage('Deploy') {  //3 
-            steps {
-                sh 'chmod 777 script/deploy.sh'
-            }
-        }
-    }
+    
 }
