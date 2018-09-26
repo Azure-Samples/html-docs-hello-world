@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('Build') {  //1
             steps { 
-                sh 'make' 
+                sh 'deploy' 
             }
         }
         stage('Test'){  //2 
             steps {
-                sh 'make check'
+                sh 'deploy'
                 junit 'reports/**/*.xml' 
             }
         }
