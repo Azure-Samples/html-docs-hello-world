@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {  //1
             steps { 
-                sh 'script/deploy.sh' 
+                sh  chmod 777'script/deploy.sh' 
             }
         }
         stage('Test'){  //2 
