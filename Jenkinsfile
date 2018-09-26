@@ -1,12 +1,12 @@
 node { 
     stage('Build') { 
-        sh 'make' 
+        sh ' chmod 777 make' 
     }
     stage('Test') {
         sh 'make check'
-        junit 'reports/**/*.xml' 
+        junit 'chmod 777 reports/**/*.xml' 
     }
     stage('Deploy') {
-        sh 'make publish'
+        sh 'chmod 777 make publish'
     }
 }
