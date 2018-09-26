@@ -1,12 +1,21 @@
-node { 
-    stage('Build') { 
-        sh ' chmod 777 make' 
-    }
-    stage('Test') {
-        
-        junit 'chmod 777 reports/**/*.xml' 
-    }
-    stage('Deploy') {
-        sh 'chmod 777 make publish'
+pipeline { 
+    agent any 
+    stages {
+        stage('Build') {  //1
+            steps { 
+                sh 'make' 
+            }
+        }
+        stage('Test'){  //2 
+            steps {
+                sh 'make check'
+                junit 'reports/**/*.xml' 
+            }
+        }
+        stage('Deploy') {  //3 
+            steps {
+                sh 'make publish'
+            }
+        }
     }
 }
