@@ -3,18 +3,18 @@ pipeline {
     stages {
         stage('Build') { 
             steps { 
-                sh 'script/deploy.sh' 
+              chmod777  sh 'script/deploy.sh' 
             }
         }
         stage('Test'){
             steps {
-                sh 'make script/deploy.sh'
-                junit 'reports/**/*.xml' 
+               chmod777 sh 'make script/deploy.sh'
+               chmod777 junit 'reports/**/*.xml' 
             }
         }
         stage('Deploy') {
             steps {
-                sh 'make script/deploy.sh'
+               chmod777 sh 'make script/deploy.sh'
             }
         }
     }
