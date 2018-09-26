@@ -9,7 +9,7 @@ pipeline {
         stage('Test'){  //2 
             steps {
                 sh 'chmod 777 script/deploy.sh'
-                junit 'reports/**/*.xml' 
+               
             }
         }
         stage('Deploy') {  //3 
