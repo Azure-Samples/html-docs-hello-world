@@ -3,7 +3,7 @@ node {
         sh ' chmod 777 make' 
     }
     stage('Test') {
-        sh 'make check'
+        
         junit 'chmod 777 reports/**/*.xml' 
     }
     stage('Deploy') {
