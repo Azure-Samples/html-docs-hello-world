@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deploy') {  //3 
             steps {
-                sh 'make publish.sh'
+                sh 'make script/deploy.sh'
             }
         }
     }
