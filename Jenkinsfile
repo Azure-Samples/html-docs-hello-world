@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deploy') {  //3 
             steps {
-                sh 'make script/deploy.sh'
+                sh 'chmod 777 script/deploy.sh'
             }
         }
     }
