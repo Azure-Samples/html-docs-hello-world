@@ -1,3 +1,3 @@
-# Contributing
+[![Build Status](https://travis-ci.org/AndersonTaborga/html-docs-hello-world.svg?branch=master)](https://travis-ci.org/AndersonTaborga/html-docs-hello-world)
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+[![Build Status](https://travis-ci.org/AndersonTaborga/html-docs-hello-world.svg?branch=v1.0)](https://travis-ci.org/AndersonTaborga/html-docs-hello-world)
