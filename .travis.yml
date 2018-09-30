@@ -1,7 +1,6 @@
+before_deploy:
+  - cd build
 deploy:
   provider: azure_web_apps
   skip_cleanup: true
-  username: azure_deployment_user       # If AZURE_WA_USERNAME isn't set
-  password: azure_deployment_password   # If AZURE_WA_PASSWORD isn't set
-  site: DevopsImpactaAula8V1       # If AZURE_WA_SITE isn't set
   verbose: true
