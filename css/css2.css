@@ -105,3 +105,10 @@ fieldset
   border-radius: 12px;
   margin-left:75px;
 }
+
+#img
+{
+	position: absolute; 
+	left: 430px; /* posiciona a 90px para a esquerda */ 
+	top: 30px; /* posiciona a 70px para baixo */
+}
