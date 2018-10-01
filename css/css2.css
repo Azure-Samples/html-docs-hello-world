@@ -29,7 +29,7 @@
 	color: #f3f3f3;
     padding: 30px 50px;
     position:absolute;
-    right:5px;
+    left: 1200px;
     top: 200px;
     margin-right:100px;
 	background: -moz-linear-gradient(
@@ -77,9 +77,9 @@
 	color: #f3f3f3;
     padding: 30px 67px;
     position:absolute;
-    right:5px;
+    left: 1200px;
     top: 400px;
-    margin-right:100px;
+    margin-right:1000px;
 	background: -moz-linear-gradient(
 		top,
 		#0004ff 0%,
@@ -94,3 +94,14 @@
     border: 3px solid #000000;
 }
 
+fieldset
+{
+  margin-top:30px;
+  background-color: rgba(0, 0, 0, 0);
+  width:1450px;
+  height:700px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border-radius: 12px;
+  margin-left:75px;
+}
