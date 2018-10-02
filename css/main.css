@@ -9,3 +9,8 @@
 	z-index: 9999;
 	background: url(images/loader-128x/Preloader_2.gif) center no-repeat #fff;
 }
+div.item div h4 {
+    height: 60px;
+    vertical-align: middle;
+    display: table-cell;
+}
