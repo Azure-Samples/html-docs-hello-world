@@ -1,49 +1,106 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<head>
+  <title>Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/libs/animate.css">
 
-    <title>Azure App Service - Sample Static HTML Site</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+  </style>
+</head>
+<body>
+  
+  
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-  </head>
-
-  <body>
-    <div class="navbar-wrapper">
-      <div class="container">
-          <h1>por pay</h1>
-          <hr/>
-      </div>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <!--<div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>-->
     </div>
-
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-
-    <div class="container">
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.4.">Home</a></li>
         
-      <div class="row">
-        <div class="col-xs-12 col-sm-6">
-          <img class="img-rectangle" src="img/azure-portal.png" alt="Azure App Service Web Apps" height="140">
-          <h2>Azure App Service Web Apps</h2>
-          <p>App Service Web Apps is a fully managed compute platform that is optimized for hosting websites and web applications. This platform-as-a-service (PaaS) offering of Microsoft Azure lets you focus on your business logic while Azure takes care of the infrastructure to run and scale your apps.</p>
-        </div>
-          <div class="col-xs-12 col-sm-6">
-              <img class="img-rectangle" src="img/cdn.png" alt="CDN" height="140">
-              <h2>Azure Content Delivery Network (CDN)</h2>
-              <p>The Azure Content Delivery Network (CDN) caches static web content at strategically placed locations to provide maximum throughput for delivering content to users. The CDN offers developers a global solution for delivering high-bandwidth content by caching the content at physical nodes across the world.</p>
-          </div>
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+   
+    <div class="col-sm-2 sidenav">
+      <div class="well"><a href="index.html">
+        <p>Thiago</p>
+      </div></a>
+	  <div class="well" ><a href="index.1.html">
+        <p>Camila</p>
+      </div></a>
+	  <div class="well"><a href="index.2.html">
+        <p>Augusto</p>
+      </div></a>
+      <div class="well"><a href="index.3.html">
+        <p>Rodolfo</p></a>
       </div>
     </div>
+ 
+  
+    <div class="col-sm-8 text-left">
+  
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="js/bootstrap.min.js"></script>
-  </body>
+      
+    </div>
+	
+	
+    
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>Currículo</p>
+</footer>
+
+</body>
 </html>
