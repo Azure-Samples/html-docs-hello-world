@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+    background-color: rgba(20, 19, 19, 0.993);
+    padding: 15px;
+    text-align:center;
+    font-size: 15px;
+    color: rgb(199, 199, 199);
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+    float: left;
+    width: 20%;
+    height: 600px; /* only for demonstration, should be removed */
+    background: rgb(247, 237, 103);
+    padding: 25px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+article {
+    float: right;
+    padding: 50px;
+    width: 80%;
+    background-color: #f7f7f7;
+    height: 600px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+</style>
+</head>
+<body>
+<header>
+  <h1>ANDERSON TEIXEIRA PAULA</h1> 
+</header>
+
+<section>
+  <nav>
+    <ul>
+        
+      <b><li>Contato</li> <br></b>
+
+      <li>E-mail: dhe.santos19@gmail.com</li><br>
+
+      <b><li>LinkedIn</li><br></b>
+    <li>www.linkedin.com/in/anderson-paula</li> <br><br><br>
+
+      <b><li>Objetivo</li><br></b>
+      <li>Estágio em Desenvolvimento de Sistemas/ BI</li>
+      
+    </ul>
+    
+  </nav>
+  
+  <article>
+    <h3>EDUCAÇÃO</h3> 
+    <h4>BACHARELADO EM SISTEMAS DE INFORMAÇÃO/2021</h4>
+    <p>Faculdade Impacta Tecnologia - FIT 
+        Certificação em Análise e Desenvolvimento de Sistemas prevista para o 2º semestre de 2019.
+    </p>
+
+    <h4>TÉCNICO EM ADMINISTRAÇÃO/2016</h4>
+    <p>Centro Paula Souza - ETEC Dr. Emílio Hernandez Aguilar 
+    </p>
+
+    <h4>TÉCNICO EM INFORMÁTICA/2013</h4>
+    <p>Centro Paula Souza - ETEC Dr. Emílio Hernandez Aguilar 
+    </p>
+
+    <h3>CURSOS COMPLENTARES</h3>
+    <p>2018 – Microsoft Excel 2016 – Do Básico ao Avançado – Udemy (11,5 horas)</p>
+
+    <p>2018 – Cursando Ruby Básico e Lógica de Programação – Youse Seguros </p>
+
+    <h3>SKILLS</h3>
+    <p>Python; 	Ruby; C#; Microsoft SQL Server; Power BI; Pacote Office 2016.
+            
+            </p>
+
+    
+    
+    
+  </article>
+</section>
+</body>
+</html>
