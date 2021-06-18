@@ -1,0 +1,5 @@
+@media (min-width: 700px) {
+    .text-align-custom {
+        text-align: center!important;
+    }
+}
