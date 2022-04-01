@@ -1,0 +1,78 @@
+pipeline {
+    agent {
+        node {
+
+            label 'master'
+
+        }
+    }
+
+    // to add maven
+    tools {
+        maven 'maven' 
+    }
+
+    options {
+        timestamps()
+
+    }
+    environment {
+
+        NABIL = "abcxyz1"
+
+    }
+
+    stages { 
+        stage('Print variable') {
+            steps {
+                sh 'echo $NABIL'
+            }
+        }
+
+        stage('Checkout from github'){
+
+            steps {
+
+                    script {
+
+                        currentBuild.displayName = "Maven test project #$BUILD_NUMBER"
+
+                    }
+
+                    sh 'echo "build starting now"'
+
+                    checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], gitTool: 'GIT', submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'mrahman@cynerge.com', url: 'https://github.com/fuz-rahm/simple-java-maven-app.git']]])
+            }
+        }
+
+        stage('Check downloaded files') {
+            steps{
+                sh 'ls'
+            }
+        }
+
+        stage('Run unit test') {
+            steps{
+                sh 'mvn clean verify'
+            }
+        }
+
+        stage('Run Pa11y') {
+            steps{
+                sh 'mvn clean verify'
+            }
+        }
+    }
+}
+© 2019 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
