@@ -1,0 +1,48 @@
+.div01 {
+
+width: 1020px;
+height: 800px;
+margin: 0 auto;
+border: 1px solid white;
+box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+
+}
+
+.div02 {
+
+width: 250px;
+height: 250px;
+margin-left: 40px;
+margin-top: 20px;
+border-radius: 50%;
+
+
+}
+
+.div03 {
+
+width: 600px;
+height: 200px;
+margin-left: 305px;
+margin-top: -220px;
+
+
+}
+
+.l1{
+	margin-top: 30px;
+	margin-left: 30px;
+}
+
+.p{
+	margin-left: 30px;
+	font-size: 15px;
+	font-family: Comics sans ms;
+}
+
+.img{
+	width: 250px;
+    height: 250px;
+	border-radius: 50%;
+
+}
