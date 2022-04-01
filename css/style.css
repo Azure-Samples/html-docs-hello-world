@@ -1,0 +1,229 @@
+@import url(http://fonts.googleapis.com/css?family=Lora);/*Importando fonte do google pelo google.com/fonts*/
+@charset "utf-8";
+/* CSS Document */
+
+/*Configuração Global*/
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+body {
+	margin:0 auto 0 auto;/*<, ^, >, v*/ 
+	max-width:960px; /*Largura máxima do body terá 960 pixels.*/
+	max-height: 1216px;
+	font-family: 'Lora', serif;/*chamando fonte importada*/
+	/*background-color: #F51;pre definindo um tamanho para o corpo do site*/
+}
+
+img {
+	border-radius: 10px; \\bordar arredondadas
+}
+
+h1,h2, p {
+	color:#060;
+	/*color:#FF8C00;*/
+}
+
+h2 {
+	font-size: 20pt;
+	margin-left: 10px;
+}
+
+.cabecalho {
+	width: 92%;
+	margin:auto;
+	/*background-color:#999; pre definindo um tamanho para a div cabecalho*/
+}
+
+.foto {
+	width: 400px;
+	height: 400px; /*Pre definindo um tamanho para a div foto*/
+}
+
+.introducao h1 {
+	/*color:#060;*/
+	font-size: 30pt;
+}
+
+.introducao h2 {
+	/*color:#060;*/
+	font-size: 20pt;
+	margin-top: -20px;
+}
+
+.introducao hr {
+	/*color:#060;*/
+	background-color: #060;
+	border-color: #060;
+}
+
+.icone {
+	display: inline-block;
+	width: 70px;
+}
+
+.icone img:hover { /*as imagens da classe icone, sofrem uma alteração na opacidade em 5%*/
+	opacity: 0.85;
+}
+
+.main {
+	width: 92%;
+	margin: auto;
+}
+
+.hr1 {
+	margin: 0 3% 0 0;
+	float:left;
+	clear:both;
+}
+
+.bt img:hover {
+	opacity: 0.85;
+}
+
+/*medida para desktop*/
+@media only screen and (min-width:481px) { /*somente screen de minimo 481px, terá o comportamento a seguir*/
+	
+	.logo {
+		padding:20px 10px 20px 0;
+		margin-left: 10px;
+	}
+	
+	.foto{
+		margin-left:10px;
+		float: left;
+		clear:both;
+		margin-right: 15px;
+	}
+	
+	.introducao h1 {
+		line-height: 40px;
+		margin-top: 10px;
+		margin-left: 10px;
+	}
+	
+	.introducao h2 {
+		margin-top: 10px;
+		margin-left: 10px;
+	}
+	
+	.icone {
+		margin-right: 15px;	
+	}
+	
+	.iconesocial {
+		width: 500px;
+		margin: auto;
+	}
+	
+	.hr1 {
+		width: 26%;
+		color:#060;
+	}
+	
+	.conteudoDetalhe {
+		display:block;
+		margin-left: 30%;
+	}
+	
+	.conteudoDetalhe h3 {
+		color:#060;
+		font-size:15pt;
+		margin-left: 10px;	
+	}
+	
+	.conteudoDetalhe h4 {
+		color:#060;
+		font-size:12pt;
+		margin-left:10px;
+		margin-top:-20px;
+	}
+	
+	.bt img {
+		 height:35px;
+		 margin-left: 10px;
+		 display:inline;
+	}
+	#FA {
+		font-size:17pt;
+	}
+	
+	#Copyright {
+		text-align: center;
+		font-size:14px;
+	}
+}
+
+/*medida para celular*/
+@media only screen and (max-width:480px) { /*Somente para screen com máximo 480px(maioria dos celulares)*/
+	
+	.logo {	
+		padding-left:20px; /*espaçamento interno*/
+		clear:both; /*remove configuração*/
+		/*background-color:#123;*/
+	}
+	
+	.foto {
+		margin: auto;
+		clear: both;
+	}
+	
+	.introducao h1 {
+		font-size: 20pt;
+		line-height: 40px;
+		margin-left: 10px;
+	}
+	
+	.introducao h2 {
+		font-size: 15pt;
+		margin-left: 10px;
+	}
+	
+	p {
+		margin-left: 10px;
+	}
+	
+	.icone {
+		margin-right: 10px;
+		
+	}
+	
+	.iconesocial {
+		margin-left:100px;
+		margin-top: 30px;
+	}
+	
+	.h1 {
+		width: 100%;
+	}
+
+	.h2 {
+		display:none;
+	}
+	
+	.conteudoDetalhe h3 {
+		color:#060;
+		font-size:15pt;
+		margin-left: 10px;	
+	}
+	
+	.conteudoDetalhe h4 {
+		color:#060;
+		font-size:12pt;
+		margin-left:10px;
+		margin-top:-20px;
+	}
+	
+	.bt img {
+		 height:35px;
+		 margin-left: 10px;
+		 margin-right:-12px;
+		 display:inline;
+	}
+	
+	#Copyright {
+		text-align: center;
+		font-size:14px;
+	}
+}
