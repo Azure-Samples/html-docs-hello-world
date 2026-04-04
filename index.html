@@ -1,44 +1,449 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<html lang="nl" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Service & Werkrapportage</title>
+  <link rel="icon" href="https://forms.office.com/cdn/images/favicon.ico" />
+  
+  <!-- Rubik font zoals NIBE gebruikt -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-    <title>Azure App Service - Sample Static HTML Site</title>
+<style>
+  :root {
+    --nibe-blue:    #2c60a1;
+    --nibe-blue-dark:#27548d;
+    --nibe-green:   #318245;
+    --nibe-green-dark:#2a6f3b;
+    --error-red:    #e84129;
+    --text-dark:    #103c79;
+    --text-normal:  #000;
+    --bg-light:     #dce6ef;
+    --border-light: #b1b1b1;
+    --card-bg:      rgba(255, 255, 255, 0.94);
+    --shadow-soft:  0 0 20px rgba(0,0,0,0.08);
+    --radius:       6px;
+  }
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-  </head>
+  * { box-sizing: border-box; margin:0; padding:0; }
 
-  <body>
-    <div class="navbar-wrapper">
-      <div class="container">
-          <h1>Azure App Service - Sample Static HTML Site</h1>
-          <hr/>
+  html, body {
+    height: 100%;
+    font-family: "Rubik", system-ui, sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.65)),
+                url('https://hive.forms.usercontent.microsoft/Images/9ad3cbc7-2522-4a4a-959a-9b21d005fb68/00ea675b-a797-4514-8532-b4b2574a3c26/T81FUK0QNMDEAO065T2KOQQLAD/906e6ac8-3f5a-40b3-a2f2-3916ab14e995') 
+                center center / cover no-repeat fixed;
+    color: #111;
+    line-height: 1.5;
+  }
+
+  .container {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(1.5px);
+  }
+
+  main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 32px 16px 80px;
+  }
+
+  .form-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: var(--shadow-soft);
+    border-radius: var(--radius);
+    width: 100%;
+    max-width: 660px;          /* was 820px → ~20% kleiner */
+    overflow: hidden;
+  }
+
+  .form-header {
+    background: var(--nibe-blue);
+    color: white;
+    padding: 44px 32px 32px;   /* kleiner dan voorheen */
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+  }
+
+  .form-header h1 {
+    font-size: 2rem;           /* was ~2.4rem */
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .form-header p {
+    font-size: 1rem;           /* was 1.15rem */
+    opacity: 0.92;
+  }
+
+  .form-body {
+    padding: 36px 32px 48px;   /* compacter */
+  }
+
+  .section-title {
+    font-size: 1.35rem;        /* was 1.55rem */
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 40px 0 20px;       /* kleiner */
+    padding-bottom: 8px;
+    border-bottom: 3px solid rgba(44,96,161,0.15);
+  }
+
+  .question {
+    margin-bottom: 28px;       /* was 38px */
+  }
+
+  .question-label {
+    display: block;
+    font-size: 0.95rem;        /* was 1.05rem */
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #111;
+  }
+
+  .required::after {
+    content: " *";
+    color: var(--error-red);
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="date"],
+  input[type="time"],
+  input[type="file"],
+  textarea {
+    width: 100%;
+    padding: 11px 14px;        /* was 14px 16px */
+    font-size: 0.95rem;        /* was 1.05rem */
+    font-weight: 300;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius);
+    background: #fff;
+    transition: all 0.2s ease;
+    font-family: "Rubik", sans-serif;
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border-color: var(--nibe-blue);
+    box-shadow: 0 0 0 3px rgba(44,96,161,0.18);
+  }
+
+  textarea {
+    min-height: 100px;         /* was 120px */
+    resize: vertical;
+  }
+
+  .yes-no-group {
+    display: flex;
+    gap: 36px;                 /* was 48px */
+    margin-top: 10px;
+  }
+
+  .yes-no-group label {
+    font-size: 0.95rem;        /* kleiner */
+    font-weight: 500;
+  }
+
+  .yes-no-group input[type="radio"] {
+    margin-right: 10px;
+    accent-color: var(--nibe-blue);
+    transform: scale(1.2);
+  }
+
+  .file-info {
+    font-size: 0.82rem;        /* was 0.9rem */
+    color: #6b7280;
+    margin-top: 6px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 14px 28px;        /* compacter dan 18px 36px */
+    font-size: 1rem;           /* was 1.15rem */
+    font-weight: 600;
+    color: white;
+    background: var(--nibe-blue);
+    border: none;
+    border-radius: var(--radius);
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    margin-top: 44px;          /* was 60px */
+    box-shadow: 0 4px 12px rgba(44,96,161,0.3);
+  }
+
+  .submit-btn:hover {
+    background: var(--nibe-blue-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(44,96,161,0.35);
+  }
+
+  #status {
+    margin-top: 32px;
+    padding: 16px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    text-align: center;
+    font-size: 1rem;           /* was 1.1rem */
+  }
+
+  #status.success {
+    background: rgba(49,130,69,0.12);
+    color: var(--nibe-green);
+    border: 1px solid rgba(49,130,69,0.3);
+  }
+
+  #status.error {
+    background: rgba(232,65,41,0.12);
+    color: var(--error-red);
+    border: 1px solid rgba(232,65,41,0.3);
+  }
+
+  footer {
+    text-align: center;
+    padding: 32px 16px;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 640px) {
+    .form-body, .form-header { padding: 28px 20px; }
+    .yes-no-group { flex-direction: column; gap: 16px; }
+    .submit-btn { padding: 14px; font-size: 0.98rem; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <main>
+    <div class="form-card">
+      <div class="form-header">
+        <h1>Service & Werkrapportage</h1>
+        <p>Service Partner - @{outputs('Een_rij_op_id_ophalen_2')?['body/name']}</p>
+      </div>
+
+      <div class="form-body">
+        <form id="serviceForm">
+          <div class="section-title">Werkorder @{outputs('Een_rij_op_id_ophalen')?['body/msdyn_name']}</div>
+
+          <div class="question">
+            <label class="question-label required" for="technicus">Technicus</label>
+            <input type="text" id="technicus" name="technicus" required placeholder="Naam technicus">
+          </div>
+
+          <div class="question">
+            <label class="question-label required" for="bezoekdatum">Bezoekdatum</label>
+            <input type="date" id="bezoekdatum" name="bezoekdatum" required>
+            <div class="file-info">(standaard: vandaag)</div>
+          </div>
+
+          <div class="section-title">Toestelinformatie</div>
+          <div class="question">
+            <label class="question-label" for="toestel">Warmtepomptype / model + serienummer</label>
+            <textarea id="toestel" name="toestel" placeholder="Bijv. NIBE F1255-6PC - 01234567891235\nMeerdere? Eén per regel."></textarea>
+          </div>
+
+          <div class="section-title">Werkrapportage</div>
+          <div class="question">
+            <label class="question-label required" for="reden">Reden van bezoek / klachtomschrijving</label>
+            <textarea id="reden" name="reden" required placeholder="Beschrijf de melding / klacht"></textarea>
+          </div>
+
+          <div class="question">
+            <label class="question-label required" for="observaties">Observaties / waarnemingen</label>
+            <textarea id="observaties" name="observaties" required placeholder="Hoe kom je de installatie tegen? ..."></textarea>
+          </div>
+
+          <div class="question">
+            <label class="question-label required" for="werkzaamheden">Uitgevoerde werkzaamheden / analyse / oorzaak</label>
+            <textarea id="werkzaamheden" name="werkzaamheden" required placeholder="Wat heb je gedaan? ... Wat was de oorzaak?"></textarea>
+          </div>
+
+          <div class="section-title">Verbruikte onderdelen</div>
+          <div class="question">
+            <label class="question-label required" for="onderdelen">Verbruikte onderdelen (artikelnummer + omschrijving)</label>
+            <textarea id="onderdelen" name="onderdelen" required placeholder="Bijv.\n0123456 - Expansieventiel\n7890123 - Filterdroger"></textarea>
+          </div>
+
+          <div class="section-title">Werkzaamheden afgerond?</div>
+          <div class="question">
+            <label class="question-label required">Werkzaamheden afgerond? Toestel werkend achtergelaten?</label>
+            <div class="yes-no-group">
+              <label><input type="radio" name="afgerond" value="ja" required> Ja</label>
+              <label><input type="radio" name="afgerond" value="nee"> Nee</label>
+            </div>
+          </div>
+
+          <div class="question">
+            <label class="question-label" for="toelichting">Toelichting bij 'Nee'</label>
+            <textarea id="toelichting" name="toelichting" placeholder="Alleen invullen als niet afgerond"></textarea>
+          </div>
+
+          <div class="section-title">Tijdregistratie</div>
+          <div class="question">
+            <label class="question-label required" for="start_reistijd">Start reistijd / Tijd van aankomst</label>
+            <input type="time" id="start_reistijd" name="start_reistijd" required>
+            <div class="file-info">(standaard: 08:00)</div>
+          </div>
+
+          <div class="question">
+            <label class="question-label required" for="eindtijd">Eindtijd</label>
+            <input type="time" id="eindtijd" name="eindtijd" required>
+            <div class="file-info">(standaard: 17:00)</div>
+          </div>
+
+          <div class="section-title">Bijlagen toevoegen</div>
+          <div class="question">
+            <label class="question-label">Upload werkrapport, foto's, notities etc.</label>
+            <input type="file" id="bijlagen" name="bijlagen" multiple accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
+            <div class="file-info">Toegestane formaten: .pdf, .jpg, .jpeg, .png, .doc, .docx (max ~4 MB per bestand)</div>
+          </div>
+
+          <button type="submit" class="submit-btn">Verzenden</button>
+        </form>
+
+        <div id="status"></div>
       </div>
     </div>
+  </main>
 
-    <!-- Wrap the rest of the page in another container to center all the content. -->
+  <footer>
+    <!-- Optioneel: klein NIBE-achtig voetnootje -->
+  </footer>
+</div>
 
-    <div class="container">
-        
-      <div class="row">
-        <div class="col-xs-12 col-sm-6">
-          <img class="img-rectangle" src="img/azure-portal.png" alt="Azure App Service Web Apps" height="140">
-          <h2>Azure App Service Web Apps</h2>
-          <p>App Service Web Apps is a fully managed compute platform that is optimized for hosting websites and web applications. This platform-as-a-service (PaaS) offering of Microsoft Azure lets you focus on your business logic while Azure takes care of the infrastructure to run and scale your apps.</p>
-        </div>
-      </div>
-    </div>
+<script>
+// ────────────────────────────────────────────────
+const form = document.getElementById('serviceForm');
+const statusDiv = document.getElementById('status');
+const fileInput = document.getElementById('bijlagen');
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="js/bootstrap.min.js"></script>
-  </body>
+// Toon geselecteerde bestanden direct onder de upload (optioneel maar heel gebruiksvriendelijk)
+const fileListDiv = document.createElement('div');
+fileListDiv.style.marginTop = '12px';
+fileListDiv.style.fontSize = '0.95rem';
+fileListDiv.style.color = '#4b5563';
+fileInput.parentNode.insertBefore(fileListDiv, fileInput.nextSibling);
+
+fileInput.addEventListener('change', () => {
+  fileListDiv.innerHTML = '';
+  if (fileInput.files.length === 0) {
+    fileListDiv.innerHTML = '<em>Geen bestanden geselecteerd</em>';
+    return;
+  }
+
+  const ul = document.createElement('ul');
+  ul.style.margin = '8px 0 0 20px';
+  ul.style.paddingLeft = '0';
+  ul.style.listStyle = 'disc';
+
+  Array.from(fileInput.files).forEach(file => {
+    const li = document.createElement('li');
+    li.textContent = `${file.name} (${(file.size / 1024).toFixed(1)} KB)`;
+    ul.appendChild(li);
+  });
+
+  fileListDiv.innerHTML = `<strong>Geselecteerd (${fileInput.files.length}):</strong>`;
+  fileListDiv.appendChild(ul);
+});
+
+const urlParams = new URLSearchParams(window.location.search);
+const workorderId = urlParams.get('WorkorderId') || '(niet meegegeven)';
+
+form.addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  statusDiv.textContent = 'Bezig met voorbereiden...';
+  statusDiv.className = '';
+
+  try {
+    const formData = new FormData(form);
+    const payload = {};
+
+    for (const [key, value] of formData.entries()) {
+      if (key !== 'bijlagen') {
+        payload[key] = value ? value.trim() : '';
+      }
+    }
+
+    const afgerond = document.querySelector('input[name="afgerond"]:checked');
+    payload.afgerond = afgerond ? afgerond.value : null;
+    payload.workorderId = workorderId;
+
+    // Meerdere bestanden omzetten naar base64 array
+    const files = fileInput.files;
+    const bestandenArray = [];
+
+    if (files.length > 0) {
+      statusDiv.textContent = `Converteren van ${files.length} bestand(en)...`;
+
+      for (let file of files) {
+        const base64 = await new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => resolve(reader.result.split(',')[1]);
+          reader.onerror = () => reject(new Error(`Fout bij lezen van ${file.name}`));
+          reader.readAsDataURL(file);
+        });
+
+        bestandenArray.push({
+          name: file.name,
+          contentType: file.type || 'application/octet-stream',
+          contentBytes: base64
+        });
+      }
+
+      payload.bestanden = bestandenArray;
+    }
+
+    statusDiv.textContent = `Verzenden (${files.length || 0} bijlage${files.length !== 1 ? 'n' : ''})...`;
+
+    const response = await fetch(
+      'https://4b9a8683e9aa46e787dfca10315141.79.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/5f429c52e803449c8c4d38c3a42d7f03/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=iQc1wpTz04G_sYhqyxtxefG286VaSLc3lLuGeQvWEgM&WorkorderId=' + encodeURIComponent(workorderId),
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      }
+    );
+
+    if (response.ok) {
+      statusDiv.textContent = `Succes! Formulier + ${files.length || 0} bijlage${files.length !== 1 ? 'n' : ''} verzonden.`;
+      statusDiv.className = 'success';
+      form.reset();
+      fileListDiv.innerHTML = ''; // lijst leegmaken na verzenden
+    } else {
+      const errText = await response.text().catch(() => '(geen details)');
+      throw new Error(`Server fout: ${response.status} – ${errText}`);
+    }
+  } catch (err) {
+    statusDiv.textContent = `Fout: ${err.message}`;
+    statusDiv.className = 'error';
+    console.error('Verzendfout:', err);
+  }
+});
+
+// Default datum + tijd
+document.addEventListener('DOMContentLoaded', () => {
+  const today = new Date().toISOString().split('T')[0];
+  document.getElementById('bezoekdatum').value = today;
+
+  const now = new Date().toTimeString().slice(0,5);
+  document.getElementById('start_reistijd').value = now;
+  document.getElementById('eindtijd').value = now;
+
+  // Initiële file list tekst
+  fileListDiv.innerHTML = '<em>Geen bestanden geselecteerd</em>';
+});
+</script>
+</body>
 </html>
